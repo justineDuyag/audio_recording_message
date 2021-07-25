@@ -1,0 +1,164 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-avatar class="avatar-sm ion-margin-start" (click)="openSettings()">
+        <img src="assets/img/avatars/6.jpg" alt="">
+      </ion-avatar>
+    </ion-buttons>
+
+    <ion-title>Chats</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="story-list scroll-horizontal">
+    <div class="scroll-item">
+      <div class="item-new">
+        <ion-icon name="add"></ion-icon>
+      </div>
+      
+    </div>
+</div>
+
+  <div class="chat-list">
+    <ion-list>
+      <ion-item
+        class="chat-item"
+        [class.unread]="i < 1"
+        lines="none"
+        *ngFor="let i of [1]"
+        routerLink="/chat"
+        detail="false"
+      >
+        <ion-avatar class="avatar-md has-status{{i % 1 === 0 ? ' avatar-stacked' : ''}}" slot="start">
+          <img src="assets/img/avatars/1.jpg" alt="">
+          <div class="avatar-status">
+            <div class="online-status active"></div>
+          </div>
+        </ion-avatar>
+        <ion-label>
+          <h2 class="chat-name">Jethro Averstruz Naldo</h2>
+          <div class="chat-description">
+            <div class="content-preview">Hello</div>
+            <div class="time-ago">· 9:10 am</div>
+          </div>
+        </ion-label>
+        <div class="online-status unread" slot="end"></div>
+        
+      </ion-item>
+
+      <ion-item
+        class="chat-item"
+        [class.unread]="i < 3"
+        lines="none"
+        *ngFor="let i of [1]"
+        routerLink="/chat"
+        detail="false"
+      >
+        <ion-avatar class="avatar-md has-status{{i % 3 === 0 ? ' avatar-stacked' : ''}}" slot="start">
+          <img src="assets/img/avatars/5.jpg" alt="">
+          <div class="avatar-status">
+            <div class="online-status active"></div>
+          </div>
+        </ion-avatar>
+        <ion-label>
+          <h2 class="chat-name">Joyce Mae Rona</h2>
+          <div class="chat-description">
+            <div class="content-preview">Bangin ada</div>
+            <div class="time-ago">· 9:10 PM</div>
+          </div>
+        </ion-label>
+        <div class="online-status unread" slot="end"></div>
+        
+      </ion-item>
+
+      <ion-item
+        class="chat-item"
+        [class.unread]="i < 3"
+        lines="none"
+        *ngFor="let i of [1]"
+        routerLink="/chat"
+        detail="false"
+      >
+        <ion-avatar class="avatar-md has-status{{i % 3 === 0 ? ' avatar-stacked' : ''}}" slot="start">
+          <img src="assets/img/avatars/2.jpg" alt="">
+          <div class="avatar-status">
+            <div class="online-status active"></div>
+          </div>
+        </ion-avatar>
+        <ion-label>
+          <h2 class="chat-name">Ma Ria Lyn</h2>
+          <div class="chat-description">
+            <div class="content-preview">Kusmusta Kana po?</div>
+            <div class="time-ago">· 8:10 PM</div>
+          </div>
+        </ion-label>
+        <div class="online-status unread" slot="end"></div>
+        
+      </ion-item>
+
+      <ion-item
+        class="chat-item"
+        [class.unread]="i < 3"
+        lines="none"
+        *ngFor="let i of [1]"
+        routerLink="/chat"
+        detail="false"
+      >
+        <ion-avatar class="avatar-md has-status{{i % 3 === 0 ? ' avatar-stacked' : ''}}" slot="start">
+          <img src="assets/img/avatars/3.jpg" alt="">
+
+          <div class="avatar-status">
+            <div class="online-status active"></div>
+          </div>
+        </ion-avatar>
+        <ion-label>
+          <h2 class="chat-name">Atilejneb Zabala Gargar II</h2>
+          <div class="chat-description">
+            <div class="content-preview">Sige po</div>
+            <div class="time-ago">· 1:30 PM</div>
+          </div>
+        </ion-label>
+        <div class="online-status unread" slot="end"></div>
+        
+      </ion-item>
+
+
+      <ion-item
+        class="chat-item"
+        [class.unread]="i < 3"
+        lines="none"
+        *ngFor="let i of [1]"
+        routerLink="/chat"
+        detail="false"
+      >
+        <ion-avatar class="avatar-md has-status{{i % 3 === 0 ? ' avatar-stacked' : ''}}" slot="start">
+          <img src="assets/img/avatars/4.jpg" alt="">
+        
+          <div class="avatar-status">
+            <div class="online-status active"></div>
+          </div>
+        </ion-avatar>
+        <ion-label>
+          <h2 class="chat-name">Franessa Superable Nicanor</h2>
+          <div class="chat-description">
+            <div class="content-preview">@l03elt3</div>
+            <div class="time-ago">· Mon</div>
+          </div>
+        </ion-label>
+        <div class="online-status unread" slot="end"></div>
+        
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
